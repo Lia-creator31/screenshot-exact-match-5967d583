@@ -28,3 +28,10 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Application architecture
+- Keep editable invitation content in a browser-safe centralized configuration module so wedding details can change independently of presentation.
+- Keep the invitation as a six-part experience on the index route with client-only rendering because its opening gate uses WebGL.
+- Render the gate with textured hinged Three.js panels; frame-driven camera and door motion stay in refs to avoid per-frame React updates.
+- Store public wedding wishes in Cloud with bounded public insert/read access and no guest edit/delete permissions.
+- Generate unique guest QR payloads with a proven QR library; session storage only retains the temporary guest ticket identifier, not shared content.

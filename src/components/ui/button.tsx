@@ -9,6 +9,9 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
+        gold: "button-gold text-primary-foreground",
+        wedding: "border border-primary/30 bg-transparent text-primary hover:bg-primary/10",
+        seal: "button-seal text-primary-foreground",
         default: "bg-primary text-primary-foreground shadow hover:bg-primary/90",
         destructive: "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:
