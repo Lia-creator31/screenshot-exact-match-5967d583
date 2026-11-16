@@ -27,8 +27,8 @@ function Doors({ open, ready }: { open: boolean; ready: () => void }) {
     state.camera.lookAt(0, 0, 0);
   });
   return <>
-    <group ref={left} position={[-1, 0, 0]}><mesh position={[0.5, 0, 0]}><boxGeometry args={[1, 3, 0.08]} /><meshStandardMaterial map={textures[0]} roughness={0.48} metalness={0.2} /></mesh></group>
-    <group ref={right} position={[1, 0, 0]}><mesh position={[-0.5, 0, 0]}><boxGeometry args={[1, 3, 0.08]} /><meshStandardMaterial map={textures[1]} roughness={0.48} metalness={0.2} /></mesh></group>
+    <group ref={left} position={[-1, 0, 0]}><mesh position={[0.5, 0, 0]}><boxGeometry args={[1, 3, 0.08]} /><meshStandardMaterial map={textures[0] ?? null} roughness={0.48} metalness={0.2} /></mesh></group>
+    <group ref={right} position={[1, 0, 0]}><mesh position={[-0.5, 0, 0]}><boxGeometry args={[1, 3, 0.08]} /><meshStandardMaterial map={textures[1] ?? null} roughness={0.48} metalness={0.2} /></mesh></group>
   </>;
 }
 
